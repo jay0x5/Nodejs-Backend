@@ -107,18 +107,15 @@ app.post('/login', async(req,res) =>{
                    var stringres = JSON.stringify(results); //=> string
                    var jsonres = JSON.parse(stringres); //=> json object
                    var logpass = jsonres[0].password //=> password field from json object
-                   console.log(logpass);
-                   console.log(pass)
+                   //console.log(logpass);
+                   //console.log(pass)
                    if(await bcrypt.compare(pass,logpass)){
                        console.log("signed in")
                    }
                    else{
                        console.log("password incorrect")
                    }
-                //    console.log(loghashpass)
-
-
-                   //TODO: Bcrypt gives diff hash every time for same input so find a way to authenticate user passwords
+                //    console.log(loghashpass)                  
                }
             });
         }
@@ -126,20 +123,6 @@ app.post('/login', async(req,res) =>{
         else{
             console.log("user not found");
         }
-
-        
-         
-        
-
-
-
-
-
-
-
-
-
-
 
     });
 });
