@@ -122,10 +122,7 @@ app.post('/login', async(req,res) =>{
                    else{
                        console.log("password incorrect")
                    }
-                //    console.log(loghashpass)
-
-
-                   //TODO: Bcrypt gives diff hash every time for same input so find a way to authenticate user passwords
+              
                }
             });
         }
